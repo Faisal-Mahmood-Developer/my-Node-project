@@ -1,0 +1,14 @@
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
+
+[[functions.include]]
+  path = "backend.js"
+
+
+
+[[redirects]]
+  force = true
+  from = "/app/*"
+  status = 200
+  to = "/.netlify/functions/backend/:splat" 
